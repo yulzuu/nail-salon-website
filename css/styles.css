@@ -245,6 +245,7 @@ h3 {
 
 .cta h2 {
   color: var(--ink);
+  font-size: clamp(2.2rem, 4vw, 3rem);
   margin-bottom: 0.75rem;
 }
 
@@ -272,6 +273,76 @@ h3 {
 .copyright {
   margin-top: 1rem;
   font-size: 0.8rem;
+}
+
+/* ---------- Services page ---------- */
+.nav-links a[aria-current="page"] {
+  color: var(--pink-darker);
+}
+
+.page-header {
+  background: var(--pink);
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+}
+
+.page-header p {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.menu {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.menu-card {
+  background: var(--cream);
+  padding: 2.25rem;
+  border-radius: var(--radius);
+  border-top: 3px solid var(--pink-deep);
+}
+
+.menu-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.menu-card > p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-list {
+  list-style: none;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--pink);
+}
+
+.price-list li:last-child {
+  border-bottom: none;
+}
+
+.price-list li span:last-child {
+  font-weight: 600;
+  color: var(--pink-darker);
+  white-space: nowrap;
 }
 
 /* ---------- Responsive ---------- */
@@ -304,8 +375,8 @@ h3 {
     margin: 0 auto;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .menu {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -324,9 +395,5 @@ h3 {
 
   .btn-nav {
     padding: 0.55rem 0.9rem;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
   }
 }
