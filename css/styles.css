@@ -359,6 +359,12 @@ h3 {
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(217, 132, 159, 0.3);
 }
 
 /* ---------- Responsive ---------- */
